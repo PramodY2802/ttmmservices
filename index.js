@@ -15,7 +15,7 @@ const PORT=process.env.PORT || 8000;
 const app =express();
 app.use(express.json());
 app.use(cors({
-    origin:["http://localhost:3000"],
+    origin:["https://sparkly-figolla-1f34fe.netlify.app/"],
     credentials:true
 }));
 
