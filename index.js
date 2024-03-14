@@ -9,6 +9,8 @@ dotenv.config();
 import { UserRouter } from './routes/user.js';
 import path from 'path';
 
+const PORT=process.env.PORT || 8000;
+
 
 const app =express();
 app.use(express.json());
@@ -24,7 +26,7 @@ app.use('/auth',UserRouter);
 mongoose.connect(process.env.DB_URI);
 
 
-app.listen(process.env.PORT,()=>{
-    console.log("server is running")
+app.listen(PORT,()=>{
+    console.log(`server is running ${PORT}`)
 });
 
